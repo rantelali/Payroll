@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.payroll.PayrollReportsController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: #ffffff;"
+            stylesheets="@payrollReports.css"
+>
+
+    <Label layoutX="270" layoutY="10" text="Payroll Reports &amp; Charts"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Button layoutX="650" layoutY="10" text="Back to Dashboard"
+            onAction="#handleBackToDashboard"
+            style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+
+
+    <Label layoutX="40" layoutY="50" text="Filter by Department:" />
+    <ComboBox fx:id="departmentComboBox" layoutX="180" layoutY="45" prefWidth="200" onAction="#filterByDepartment" />
+
+
+    <Label layoutX="40" layoutY="90" text="Employee Net Salaries" style="-fx-font-weight: bold;" />
+    <BarChart fx:id="barChart" layoutX="40" layoutY="110" prefWidth="700" prefHeight="200">
+        <xAxis><CategoryAxis label="Employee"/></xAxis>
+        <yAxis><NumberAxis label="Net Salary"/></yAxis>
+    </BarChart>
+
+
+    <Label layoutX="40" layoutY="330" text="Department Total Net Salaries" style="-fx-font-weight: bold;" />
+    <BarChart fx:id="departmentChart" layoutX="40" layoutY="350" prefWidth="700" prefHeight="200">
+        <xAxis><CategoryAxis label="Department"/></xAxis>
+        <yAxis><NumberAxis label="Total Net"/></yAxis>
+    </BarChart>
+
+    <Button layoutX="700" layoutY="560" text="Back" onAction="#handleBack" />
+</AnchorPane>

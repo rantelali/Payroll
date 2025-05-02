@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.payroll.RegisterController"
+            prefWidth="450" prefHeight="500" stylesheets="register.css">
+
+    <Label layoutX="130" layoutY="20" text="User Registration"
+           style="-fx-font-size: 18px; -fx-text-fill: #2c3e50;" />
+
+    <Label layoutX="60" layoutY="70" text="Name:" />
+    <TextField fx:id="nameField" layoutX="180" layoutY="65" prefWidth="200" />
+
+    <Label layoutX="60" layoutY="120" text="Email:" />
+    <TextField fx:id="emailField" layoutX="180" layoutY="115" prefWidth="200" />
+
+    <Label layoutX="60" layoutY="170" text="Username:" />
+    <TextField fx:id="usernameField" layoutX="180" layoutY="165" prefWidth="200" />
+
+    <Label layoutX="60" layoutY="220" text="Password:" />
+    <PasswordField fx:id="passwordField" layoutX="180" layoutY="215" prefWidth="200" />
+
+    <Label layoutX="60" layoutY="270" text="Confirm Password:" />
+    <PasswordField fx:id="confirmPasswordField" layoutX="180" layoutY="265" prefWidth="200" />
+
+    <Label layoutX="60" layoutY="320" text="Role:" />
+    <ComboBox fx:id="roleComboBox" layoutX="180" layoutY="315" prefWidth="200" />
+
+    <Button fx:id="registerBtn" layoutX="180" layoutY="370" prefWidth="200"
+            text="Register" onAction="#handleRegister"
+            style="-fx-background-color: #3498db; -fx-text-fill: white;" />
+
+    <Hyperlink fx:id="loginLink" layoutX="180" layoutY="420"
+               text="Already have an account? Login!" onAction="#goToLogin" />
+
+    <Hyperlink fx:id="homeLink" layoutX="180" layoutY="450"
+               text="Back to Home" onAction="#goToHome" />
+</AnchorPane>

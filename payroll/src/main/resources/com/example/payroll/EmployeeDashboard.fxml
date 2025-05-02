@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.payroll.EmployeeDashboardController"
+            prefWidth="600" prefHeight="400" style="-fx-padding: 20;"  stylesheets="employeeDashboard.css">
+
+    <Label text="Employee Dashboard" layoutX="20" layoutY="20"
+           style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+
+    <Label text="Name:" layoutX="20" layoutY="70"/>
+    <Label fx:id="nameLabel" layoutX="150" layoutY="70"/>
+
+    <Label text="Email:" layoutX="20" layoutY="110"/>
+    <Label fx:id="emailLabel" layoutX="150" layoutY="110"/>
+
+    <Label text="Department:" layoutX="20" layoutY="150"/>
+    <Label fx:id="departmentLabel" layoutX="150" layoutY="150"/>
+
+    <Label text="Position:" layoutX="20" layoutY="190"/>
+    <Label fx:id="positionLabel" layoutX="150" layoutY="190"/>
+
+    <Label text="Basic Salary:" layoutX="20" layoutY="230"/>
+    <Label fx:id="salaryLabel" layoutX="150" layoutY="230"/>
+
+    <Label text="Working Hours:" layoutX="20" layoutY="270"/>
+    <Label fx:id="hoursLabel" layoutX="150" layoutY="270"/>
+
+    <Label text="Net Salary:" layoutX="20" layoutY="310"/>
+    <Label fx:id="netSalaryLabel" layoutX="150" layoutY="310"/>
+
+
+    <Button text="Download Pay slip (PDF)" layoutX="350" layoutY="310"
+            onAction="#handleDownloadPayslip"/>
+    <Button text="Logout" layoutX="520" layoutY="310"
+            onAction="#handleLogout"/>
+
+</AnchorPane>

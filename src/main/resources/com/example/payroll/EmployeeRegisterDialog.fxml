@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.payroll.EmployeeRegisterDialogController"
+            prefWidth="400" prefHeight="500" style="-fx-padding: 15;" stylesheets="employeeRegisterDialog.css">
+
+    <Label text="Register New Employee" layoutX="20" layoutY="20"
+           style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+
+    <Label text="Employee Details" layoutX="20" layoutY="50"
+           style="-fx-font-weight: bold; -fx-underline: true;"/>
+
+    <TextField fx:id="nameField" layoutX="20" layoutY="80" prefWidth="360" promptText="Full Name"/>
+    <TextField fx:id="departmentField" layoutX="20" layoutY="120" prefWidth="360" promptText="Department"/>
+    <TextField fx:id="positionField" layoutX="20" layoutY="160" prefWidth="360" promptText="Position"/>
+    <TextField fx:id="salaryField" layoutX="20" layoutY="200" prefWidth="360" promptText="Basic Salary"/>
+    <TextField fx:id="hoursField" layoutX="20" layoutY="240" prefWidth="360" promptText="Working Hours"/>
+
+
+    <Label text="Login Credentials" layoutX="20" layoutY="280"
+           style="-fx-font-weight: bold; -fx-underline: true;"/>
+
+    <TextField fx:id="usernameField" layoutX="20" layoutY="310" prefWidth="360" promptText="Username"/>
+    <TextField fx:id="emailField" layoutX="20" layoutY="350" prefWidth="360" promptText="Email"/>
+    <PasswordField fx:id="passwordField" layoutX="20" layoutY="390" prefWidth="360" promptText="Password"/>
+
+
+    <Button text="Register" layoutX="120" layoutY="440" prefWidth="120"
+            style="-fx-background-color: #27ae60; -fx-text-fill: white;"
+            onAction="#handleRegister"/>
+    <Button text="Cancel" layoutX="260" layoutY="440" prefWidth="120"
+            onAction="#handleCancel"/>
+</AnchorPane>

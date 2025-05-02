@@ -1,0 +1,46 @@
+
+.anchor-pane {
+    -fx-background-color: #f7f9fa;
+    -fx-padding: 20;
+}
+
+.label {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #2c3e50;
+}
+
+.label.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+
+.text-field,
+.password-field,
+.combo-box {
+    -fx-pref-width: 250px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+
+#loginBtn {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+}
+
+
+.hyperlink {
+    -fx-text-fill: #2980b9;
+    -fx-underline: true;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #1c5980;
+    -fx-cursor: hand;
+}

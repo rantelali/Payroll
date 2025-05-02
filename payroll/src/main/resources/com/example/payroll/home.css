@@ -1,0 +1,45 @@
+
+.anchor-pane {
+    -fx-background-color: #ecf0f1;
+}
+
+
+.label {
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.label.title {
+    -fx-font-size: 20px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+
+.label.description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+
+.button#registerButton {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+}
+
+
+.button#loginButton {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+}
+
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+}

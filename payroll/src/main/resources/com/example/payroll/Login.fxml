@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.payroll.LoginController"
+            prefWidth="400" prefHeight="400" style="-fx-padding: 20;" stylesheets="login.css">
+
+    <Label text="Login" layoutX="20" layoutY="20" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <Label text="Email:" layoutX="20" layoutY="70"/>
+    <TextField fx:id="emailField" layoutX="120" layoutY="65" prefWidth="250"/>
+
+    <Label text="Username:" layoutX="20" layoutY="110"/>
+    <TextField fx:id="usernameField" layoutX="120" layoutY="105" prefWidth="250"/>
+
+    <Label text="Password:" layoutX="20" layoutY="150"/>
+    <PasswordField fx:id="passwordField" layoutX="120" layoutY="145" prefWidth="250"/>
+
+    <Label text="Role:" layoutX="20" layoutY="190"/>
+    <ComboBox fx:id="roleComboBox" layoutX="120" layoutY="185" prefWidth="250"/>
+
+    <Button fx:id="loginBtn" text="Login" layoutX="150" layoutY="230" prefWidth="100"
+            style="-fx-background-color: #3498db; -fx-text-fill: white;" onAction="#handleLogin"/>
+
+    <HBox layoutX="20" layoutY="280" spacing="10">
+        <Label text="Don't have an account?"/>
+        <Hyperlink fx:id="registerLink" text="Register" onAction="#handleRegisterLink"/>
+    </HBox>
+
+    <HBox layoutX="20" layoutY="310" spacing="10">
+        <Label text="Back to"/>
+        <Hyperlink fx:id="homeLink" text="Home" onAction="#handleHomeLink"/>
+    </HBox>
+
+</AnchorPane>

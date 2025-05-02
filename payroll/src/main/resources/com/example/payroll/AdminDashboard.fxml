@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.payroll.AdminDashboardController"
+            prefWidth="600" prefHeight="500"
+            style="-fx-background-color: #ecf0f1;" stylesheets="@adminDashboard.css"
+>
+
+    <Label layoutX="200" layoutY="20" text="Admin Dashboard"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+
+    <Button fx:id="manageEmployeesBtn" layoutX="180" layoutY="80" prefWidth="240"
+            text="Manage Employees" onAction="#handleManageEmployees" />
+
+
+    <Button fx:id="salaryCalcBtn" layoutX="180" layoutY="140" prefWidth="240"
+            text="Process Salary Calculations" onAction="#handleSalaryCalculation" />
+
+
+    <Button fx:id="generatePayslipBtn" layoutX="180" layoutY="200" prefWidth="240"
+            text="Generate &amp; Export Payslips" onAction="#handleGeneratePayslips" />
+
+
+    <Button fx:id="reportsBtn" layoutX="180" layoutY="260" prefWidth="240"
+            text="Payroll Reports &amp; Charts" onAction="#handleReports" />
+
+
+    <Hyperlink layoutX="260" layoutY="330" text="Logout"
+               onAction="#handleLogout"
+               style="-fx-text-fill: #c0392b; -fx-font-weight: bold;" />
+</AnchorPane>

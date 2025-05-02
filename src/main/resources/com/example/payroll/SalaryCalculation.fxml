@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane stylesheets="@salaryCalculation.css"
+            prefHeight="500" prefWidth="700" style="-fx-background-color: #f9f9f9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payroll.SalaryCalculationController">
+
+    <Label layoutX="250" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Salary Calculator" />
+    <Button layoutX="469.0" layoutY="23.0" onAction="#handleBackToDashboard" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Back to Dashboard" />
+
+
+    <Label layoutX="50" layoutY="70" text="Select Department:" />
+    <ComboBox fx:id="departmentComboBox" layoutX="180" layoutY="65" onAction="#handleDepartmentFilter" prefWidth="200" />
+
+
+    <Label layoutX="50" layoutY="110" text="Select Employee:" />
+    <ComboBox fx:id="employeeComboBox" layoutX="180" layoutY="105" onAction="#handleEmployeeSelection" prefWidth="300" />
+
+
+    <Label layoutX="50" layoutY="150" text="Basic Salary:" />
+    <Label fx:id="salaryLabel" layoutX="180" layoutY="150" text="-" />
+
+    <Label layoutX="50" layoutY="180" text="Working Hours:" />
+    <Label fx:id="hoursLabel" layoutX="180" layoutY="180" text="-" />
+
+
+    <TextField fx:id="overtimeField" layoutX="180" layoutY="230" promptText="Overtime Pay" />
+    <TextField fx:id="taxField" layoutX="180" layoutY="270" promptText="Tax %" />
+    <TextField fx:id="insuranceField" layoutX="180" layoutY="310" promptText="Insurance" />
+    <TextField fx:id="otherDeductionField" layoutX="180" layoutY="350" promptText="Other Deductions" />
+
+
+    <Button layoutX="180" layoutY="400" onAction="#handleCalculate" text="Calculate &amp; Save" />
+    <Button layoutX="300" layoutY="400" onAction="#handleClear" text="Clear" />
+
+    
+    <Label fx:id="resultLabel" layoutX="180" layoutY="440" style="-fx-text-fill: #27ae60; -fx-font-size: 16px;" />
+</AnchorPane>
